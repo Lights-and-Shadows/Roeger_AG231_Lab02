@@ -17,8 +17,8 @@ MonoBehaviour:
     ufoLicenseKey: QWZrSVB1ci8vLy8vQUFBQUtGT3dOMjBsTDA0cHQ3aTZzMWtQQ09zYUdXSVNWVzgxL0loSW4zS0NRODRBU0g4WlI5Y2FHVlozS05lVkJYM3hWNTB6QmkvYVphMkw1bWE3K29kTncrT0hBdENJTGZVblJONHFhZEc3QUJ4VEIrWFVYVlFEU1hmUkFydWNLMnlpZWlLeTFiOGRBVFNSczJxZmc4ZXZYUWxKTExTY1YxcjJPL3o1aHp3dXVmTUkwbk8vSEJSSXFNQmpoTldLV25QNFpsKzd2N2RTUGZjVDJOQjFRRDNQUHI2N0tPU053dzFVR3pzUGkyeVlnR1FFU2UySGZMcmtOdHlrMGpQd2hiZTJsdzdtbHJlc1JnMjJqM0lyRkZncXQwT0NCZVkvbEhRbVJ2MjlWckkwRTloWWpPN285TXhpZDRmVFovRm5uUjh3Wm9rYWpMdEd1UVV6V25QZ2lHelh6SHk4dzdBWmVYSTdSTzVHK1BOVFFjclo=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 6
+    maxSimultaneousObjectTargets: 2
     useDelayedLoadingObjectTargets: 0
     version: 8.1.12
     eulaAcceptedVersions: '{"Values":["8.1"]}'
@@ -65,5 +65,5 @@ MonoBehaviour:
     autoStartTracker: 0
   webcam:
     deviceNameSetInEditor: 
-    turnOffWebCam: 0
+    turnOffWebCam: 1
     renderTextureLayer: 30

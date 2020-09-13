@@ -28,7 +28,7 @@ public class ToggleObj : MonoBehaviour, IVirtualButtonEventHandler
         toggleBtn = GameObject.Find("btnToggleKnot");
         toggleBtn.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
 
-        isToggled = false;
+        isToggled = true;
     }
 
     void Update()
