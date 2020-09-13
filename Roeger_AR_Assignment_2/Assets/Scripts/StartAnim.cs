@@ -12,15 +12,15 @@ public class StartAnim : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-
-    }
-
-    public void OnButtonReleased(VirtualButtonBehaviour vb)
-    {
         if (started)
             started = false;
         else
             started = true;
+    }
+
+    public void OnButtonReleased(VirtualButtonBehaviour vb)
+    {
+        
     }
     // Start is called before the first frame update
     void Start()

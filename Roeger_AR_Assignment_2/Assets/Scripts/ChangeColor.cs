@@ -6,7 +6,8 @@ using Vuforia;
 public class ChangeColor : MonoBehaviour, IVirtualButtonEventHandler
 {
 
-    public GameObject btn, sphere;
+    public GameObject btn;
+    public Renderer ren;
 
     public List<Color> colors;
 
@@ -14,29 +15,31 @@ public class ChangeColor : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-
-    }
-
-    public void OnButtonReleased(VirtualButtonBehaviour vb)
-    {
         if (curColor == colors.Count - 1)
             curColor = 0;
         else
             curColor++;
     }
+
+    public void OnButtonReleased(VirtualButtonBehaviour vb)
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
+        btn.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+
         colors = new List<Color>();
         Color red, green, blue, yellow, purple, orange, white;
 
-        red = new Color(255, 0, 0);
-        green = new Color(0, 255, 0);
-        blue = new Color(0, 0, 255);
-        yellow = new Color(255, 255, 0);
-        purple = new Color(150, 0, 255);
-        orange = new Color(255, 150, 0);
-        white = new Color(255, 255, 255);
+        red = new Color(1f, 0f, 0f);
+        green = new Color(0f, 1f, 0f);
+        blue = new Color(0f, 0f, 1f);
+        yellow = new Color(1f, 1f, 0f);
+        purple = new Color(0.59f, 0f, 1f);
+        orange = new Color(1f, 0.53f, 0f);
+        white = new Color(1f, 1f, 1f);
 
         colors.Add(red);
         colors.Add(green);
@@ -46,13 +49,11 @@ public class ChangeColor : MonoBehaviour, IVirtualButtonEventHandler
         colors.Add(orange);
         colors.Add(white);
 
-        sphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", white);
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        sphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", colors[curColor]);
+        ren.material.SetColor("_EmissionColor", colors[curColor]);
     }
 }

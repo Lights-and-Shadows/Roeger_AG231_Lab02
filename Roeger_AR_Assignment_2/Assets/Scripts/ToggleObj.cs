@@ -12,15 +12,15 @@ public class ToggleObj : MonoBehaviour, IVirtualButtonEventHandler
     
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-        
-    }
-
-    public void OnButtonReleased(VirtualButtonBehaviour vb)
-    {
         if (isToggled)
             isToggled = false;
         else
             isToggled = true;
+    }
+
+    public void OnButtonReleased(VirtualButtonBehaviour vb)
+    {
+        
     }
 
     void Start()
@@ -28,7 +28,7 @@ public class ToggleObj : MonoBehaviour, IVirtualButtonEventHandler
         toggleBtn = GameObject.Find("btnToggleKnot");
         toggleBtn.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
 
-        isToggled = true;
+        isToggled = false;
     }
 
     void Update()
