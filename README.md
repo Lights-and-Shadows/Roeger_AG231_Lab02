@@ -7,8 +7,13 @@ This lab centers around the use of Vuforia in conjunction with AR technology. In
 The images, in order, are:
 
 1: Holder for the model
+
 2: Toggles the model visible / not visible
+
 3: Starts / stops the animation of the sphere inside
+
 4: Change the color of the sphere
+
 5: Rotate the knot on it's forward axis
+
 6: Display the equations used to make the knot
